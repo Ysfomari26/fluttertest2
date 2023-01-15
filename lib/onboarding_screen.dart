@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertest/home_page.dart';
 import 'package:fluttertest/size_config.dart';
 import 'package:fluttertest/onboarding_contents.dart';
 
@@ -116,7 +117,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ? Padding(
                           padding: const EdgeInsets.all(30),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/home', arguments: MaterialPageRoute(builder: (context) =>HomePage()));
+                            },
                             child: const Text("START"),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
